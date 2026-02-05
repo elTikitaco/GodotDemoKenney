@@ -1,0 +1,58 @@
+[gd_scene load_steps=11 format=3 uid="uid://ch7tkmxtxfjlg"]
+
+[ext_resource type="Texture2D" uid="uid://g8c4jb2js4vq" path="res://assets/Sprites/Characters/Default/character_beige_front.png" id="1_2e1bd"]
+[ext_resource type="Texture2D" uid="uid://d541cvt6h3ex" path="res://assets/Sprites/Characters/Default/character_beige_walk_a.png" id="2_jley3"]
+[ext_resource type="Texture2D" uid="uid://ddip5q8s8sx43" path="res://assets/Sprites/Characters/Default/character_beige_walk_b.png" id="3_aqn6p"]
+[ext_resource type="Texture2D" uid="uid://bl432qhhy7pwh" path="res://assets/Sprites/Characters/Default/character_beige_idle.png" id="4_ubykp"]
+[ext_resource type="Texture2D" uid="uid://cyhwlgcsfaqqy" path="res://assets/Sprites/Characters/Default/character_beige_jump.png" id="5_60fpc"]
+[ext_resource type="Texture2D" uid="uid://caowwjk8q7vxk" path="res://assets/Sprites/Characters/Default/character_beige_duck.png" id="6_b4fon"]
+[ext_resource type="Texture2D" uid="uid://canuk8mveyceo" path="res://assets/Sprites/Characters/Default/character_beige_hit.png" id="7_asal7"]
+[ext_resource type="Texture2D" uid="uid://dqmv58kos6qth" path="res://assets/Sprites/Characters/Default/character_beige_climb_a.png" id="8_m8yq3"]
+[ext_resource type="Texture2D" uid="uid://wdw4yiy4lllw" path="res://assets/Sprites/Characters/Default/character_beige_climb_b.png" id="9_aayo1"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jley3"]
+radius = 5.528846
+height = 20.329672
+
+[node name="ProtaBeige" type="CharacterBody2D"]
+
+[node name="Front" type="Sprite2D" parent="."]
+texture = ExtResource("1_2e1bd")
+
+[node name="WalkForwardA" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("2_jley3")
+
+[node name="WalkForwardB" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("3_aqn6p")
+
+[node name="Idle" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("4_ubykp")
+
+[node name="Jump" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("5_60fpc")
+
+[node name="Duck" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("6_b4fon")
+
+[node name="Hit" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("7_asal7")
+
+[node name="ClimbA" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("8_m8yq3")
+
+[node name="ClimbB" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("9_aayo1")
+
+[node name="ColisionNormal" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(0, 26)
+scale = Vector2(4.1600003, 3.6399999)
+shape = SubResource("CapsuleShape2D_jley3")

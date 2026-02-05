@@ -1,0 +1,42 @@
+[gd_scene load_steps=5 format=3 uid="uid://dimj68luxcccb"]
+
+[ext_resource type="Texture2D" uid="uid://cmv81u605beys" path="res://assets/Sprites/Tiles/Default/terrain_grass_block_top.png" id="1_jdhiu"]
+[ext_resource type="Texture2D" uid="uid://copki06cusiys" path="res://assets/Sprites/Tiles/Default/terrain_grass_block_top_right.png" id="2_te30u"]
+[ext_resource type="Texture2D" uid="uid://vdaj7gjv2dx8" path="res://assets/Sprites/Tiles/Default/terrain_grass_block_top_left.png" id="3_rdeej"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dsl75"]
+
+[node name="Piso" type="RigidBody2D"]
+
+[node name="Tierra" type="Sprite2D" parent="."]
+texture = ExtResource("1_jdhiu")
+
+[node name="Tierra2" type="Sprite2D" parent="."]
+position = Vector2(64, 0)
+texture = ExtResource("1_jdhiu")
+
+[node name="Tierra3" type="Sprite2D" parent="."]
+position = Vector2(-64, 0)
+texture = ExtResource("1_jdhiu")
+
+[node name="Tierra4" type="Sprite2D" parent="."]
+position = Vector2(-125, 0)
+texture = ExtResource("1_jdhiu")
+
+[node name="Tierra5" type="Sprite2D" parent="."]
+position = Vector2(125, 0)
+texture = ExtResource("1_jdhiu")
+
+[node name="Tierra6" type="Sprite2D" parent="."]
+position = Vector2(188, 0)
+texture = ExtResource("2_te30u")
+
+[node name="Tierra7" type="Sprite2D" parent="."]
+position = Vector2(-188, 0)
+texture = ExtResource("3_rdeej")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -17)
+scale = Vector2(21.68, 1)
+shape = SubResource("RectangleShape2D_dsl75")
+one_way_collision = true

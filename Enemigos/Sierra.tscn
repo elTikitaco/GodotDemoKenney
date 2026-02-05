@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://d1pqf8qx3082l"]
+
+[ext_resource type="Texture2D" uid="uid://ctvwdcsp7qtff" path="res://assets/Sprites/Enemies/Default/saw_a.png" id="1_ajpuy"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0vuqo"]
+radius = 24.0
+
+[node name="RigBod_Sierra" type="RigidBody2D"]
+
+[node name="SawA" type="Sprite2D" parent="."]
+texture = ExtResource("1_ajpuy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_0vuqo")
