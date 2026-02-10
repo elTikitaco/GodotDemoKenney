@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://b2ataj7w8u5wg"]
+[gd_scene load_steps=8 format=3 uid="uid://b2ataj7w8u5wg"]
 
 [ext_resource type="PackedScene" uid="uid://wuaddxd8hmu" path="res://Niveles/Nivel 1/piso_static.tscn" id="1_rkp41"]
 [ext_resource type="PackedScene" uid="uid://ch7tkmxtxfjlg" path="res://Personajes/Billy_Beige.tscn" id="2_5550a"]
 [ext_resource type="PackedScene" uid="uid://b6lu8u2kl1ea1" path="res://Niveles/Nivel 1/Tierra_Plataforma.tscn" id="3_5550a"]
+[ext_resource type="Script" uid="uid://ctxqxd438ruoi" path="res://Enemigos/Sierra.gd" id="3_evpno"]
 [ext_resource type="PackedScene" uid="uid://d1pqf8qx3082l" path="res://Enemigos/Sierra.tscn" id="4_yfk5n"]
 [ext_resource type="Texture2D" uid="uid://cjgwpyx5eu2ds" path="res://assets/Sprites/Tiles/Default/sign_right.png" id="5_pum13"]
 [ext_resource type="Texture2D" uid="uid://brdoi8mkgg1qi" path="res://assets/Sprites/Tiles/Default/rock.png" id="6_uswgf"]
@@ -20,6 +21,7 @@ anchor_mode = 0
 
 [node name="RigBod_Sierra" parent="." instance=ExtResource("4_yfk5n")]
 position = Vector2(25, 242)
+script = ExtResource("3_evpno")
 
 [node name="RigBod_Sierra2" parent="." instance=ExtResource("4_yfk5n")]
 position = Vector2(1099, 414)

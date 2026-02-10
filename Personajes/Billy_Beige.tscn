@@ -1,6 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://ch7tkmxtxfjlg"]
+[gd_scene load_steps=13 format=3 uid="uid://ch7tkmxtxfjlg"]
 
 [ext_resource type="Texture2D" uid="uid://g8c4jb2js4vq" path="res://assets/Sprites/Characters/Default/character_beige_front.png" id="1_2e1bd"]
+[ext_resource type="Script" uid="uid://coy4h2wk1dds0" path="res://Personajes/BillyBeigeFisicas.gd" id="1_ubykp"]
 [ext_resource type="Texture2D" uid="uid://d541cvt6h3ex" path="res://assets/Sprites/Characters/Default/character_beige_walk_a.png" id="2_jley3"]
 [ext_resource type="Texture2D" uid="uid://ddip5q8s8sx43" path="res://assets/Sprites/Characters/Default/character_beige_walk_b.png" id="3_aqn6p"]
 [ext_resource type="Texture2D" uid="uid://bl432qhhy7pwh" path="res://assets/Sprites/Characters/Default/character_beige_idle.png" id="4_ubykp"]
@@ -9,12 +10,14 @@
 [ext_resource type="Texture2D" uid="uid://canuk8mveyceo" path="res://assets/Sprites/Characters/Default/character_beige_hit.png" id="7_asal7"]
 [ext_resource type="Texture2D" uid="uid://dqmv58kos6qth" path="res://assets/Sprites/Characters/Default/character_beige_climb_a.png" id="8_m8yq3"]
 [ext_resource type="Texture2D" uid="uid://wdw4yiy4lllw" path="res://assets/Sprites/Characters/Default/character_beige_climb_b.png" id="9_aayo1"]
+[ext_resource type="Script" uid="uid://8lrfpcq6nvck" path="res://Personajes/CamaraBillyBeige.gd" id="11_60fpc"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jley3"]
 radius = 5.528846
 height = 20.329672
 
 [node name="ProtaBeige" type="CharacterBody2D"]
+script = ExtResource("1_ubykp")
 
 [node name="Front" type="Sprite2D" parent="."]
 texture = ExtResource("1_2e1bd")
@@ -56,3 +59,7 @@ visible = false
 position = Vector2(0, 26)
 scale = Vector2(4.1600003, 3.6399999)
 shape = SubResource("CapsuleShape2D_jley3")
+
+[node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("object_to_follow")]
+script = ExtResource("11_60fpc")
+object_to_follow = NodePath("..")
